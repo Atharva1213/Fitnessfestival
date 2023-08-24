@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.hover-4 {
+  padding: 4px;
+  border: 5px solid;
+  border-image: repeating-linear-gradient(135deg, #E97F02 0 20px, #82eb18 0 30px) 8;
+  -webkit-mask:
+    conic-gradient(from 180deg at top 8px right 8px, #0000 90deg, #000 0) var(--_i, 200%) 0 /200% var(--_i, 8px) border-box no-repeat,
+    conic-gradient(at bottom 8px left 8px, #0000 90deg, #000 0) 0 var(--_i, 200%)/var(--_i, 8px) 200% border-box no-repeat,
+    linear-gradient(#000 0 0) padding-box no-repeat;
+  transition: .3s, -webkit-mask-position .3s .3s;
+}
+
+.hover-4:hover {
+  --_i: 100%;
+  color: #f17b53;
+  transition: .3s, -webkit-mask-size .3s .3s;
+}
+
+/* Change the style of the scrollbar track */
+::-webkit-scrollbar {
+  width: 5px;
+  /* Set the width of the scrollbar */
+  background-color: #212121;
+}
+
+/* Change the style of the scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background-color: #ff9900;
+  /* Set the color of the thumb */
+  border-radius: 0;
+  /* Set the radius of the thumb */
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: #212121;
+  /* Set the color of the track on hover */
+}
+
+
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(255, 0, 0, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.live-glow {
+  animation: glow 2s infinite;
+}
+
+.right-car {
+  background: rgb(240, 11, 111);
+  background: radial-gradient(circle, rgba(240, 11, 111, 1) 0%, rgba(0, 0, 0, 1) 55%);
+}
+
+@keyframes done-glow {
+  0% {
+    box-shadow: 0 0 5px rgba(81, 246, 10, 0.8);
+  }
+
+  50% {
+    box-shadow: 0 0 40px rgba(94, 255, 0, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 5px rgba(106, 255, 0, 0.8);
+  }
+}
+
+.done-glow {
+  animation: done-glow 2s infinite;
+}
+
+
+@media (max-width: 575.98px) {
+
+  .card-view {
+    flex-direction: column;
+    margin-top: 180px;
+    align-items: center;
+    padding: 0;
+    justify-content: center;
+
+  }
+
+  .card {
+    width: 80%;
+  }
+
+  .nav-items {
+    display: none;
+  }
+
+  .navbar {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 12px;
+
+  }
+
+  .tagline {
+    border: 1px solid white;
+    padding: 12px;
+    font-size: 18px;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(15, 23, 42, 0.751);
+
+  }
+
+  .tag {
+    padding: 0;
+    color: #e96202
+  }
+
+  .icon {
+    display: block;
+  }
+
+}
